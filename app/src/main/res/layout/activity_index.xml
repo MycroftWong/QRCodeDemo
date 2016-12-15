@@ -17,6 +17,12 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="test"
+        android:text="test"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:onClick="weixin"
         android:text="weixin"/>
 
@@ -24,6 +30,8 @@
         android:id="@+id/info_text_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:gravity="start|top"
         android:padding="16dp"
         android:textColor="@android:color/black"
         android:textSize="16sp"/>

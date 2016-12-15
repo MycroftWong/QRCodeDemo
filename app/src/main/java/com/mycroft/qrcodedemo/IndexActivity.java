@@ -25,6 +25,10 @@ public class IndexActivity extends AppCompatActivity {
         startActivityForResult(new Intent(this, MainActivity.class), REQUEST_CODE);
     }
 
+    public void test(View view) {
+        startActivity(new Intent(this, TestActivity.class));
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -51,4 +55,5 @@ public class IndexActivity extends AppCompatActivity {
 //        intent.setData(Uri.parse("http://weixin.qq.com/r/dm32309890jdsfjal"));
         startActivity(intent);
     }
+
 }

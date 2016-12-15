@@ -60,7 +60,6 @@ public final class ViewfinderView extends View {
         super(context, attrs);
 
         density = context.getResources().getDisplayMetrics().density;
-        //½«ÏñËØ×ª»»³Édp
         ScreenRate = (int) (20 * density);
 
         paint = new Paint();
@@ -102,12 +101,10 @@ public final class ViewfinderView extends View {
         canvas.drawRect(0, frame.bottom + 1, width, height, paint);
 
         if (resultBitmap != null) {
-            // Draw the opaque result bitmap over the scanning rectangle
             paint.setAlpha(OPAQUE);
             canvas.drawBitmap(resultBitmap, frame.left, frame.top, paint);
         } else {
 
-            //»­É¨Ãè¿ò±ßÉÏµÄ½Ç£¬×Ü¹²8¸ö²¿·Ö
             paint.setColor(Color.GREEN);
             canvas.drawRect(frame.left, frame.top, frame.left + ScreenRate,
                     frame.top + CORNER_WIDTH, paint);

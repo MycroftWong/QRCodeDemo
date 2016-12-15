@@ -24,7 +24,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
 
@@ -36,6 +35,9 @@
                     android:scheme="http"/>
             </intent-filter>
         </activity>
+        <activity
+            android:name=".TestActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

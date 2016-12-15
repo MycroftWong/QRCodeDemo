@@ -48,12 +48,22 @@ public class MainActivity extends AppCompatActivity implements QRCodeReaderView.
     @Override
     protected void onResume() {
         super.onResume();
+    }
+
+    @Override
+    public void onAttachedToWindow() {
+        super.onAttachedToWindow();
         mQrCodeReaderView.startCamera();
+    }
+
+    @Override
+    public void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+        mQrCodeReaderView.stopCamera();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        mQrCodeReaderView.stopCamera();
     }
 }
