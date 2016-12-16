@@ -23,6 +23,12 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="zxing"
+        android:text="zxing"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:onClick="weixin"
         android:text="weixin"/>
 

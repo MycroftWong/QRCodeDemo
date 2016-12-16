@@ -30,6 +30,10 @@ public class IndexActivity extends AppCompatActivity {
         startActivity(new Intent(this, TestActivity.class));
     }
 
+    public void zxing(View view) {
+        startActivity(new Intent(this, ZxingActivity.class));
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

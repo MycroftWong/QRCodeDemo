@@ -8,6 +8,18 @@
     android:orientation="vertical"
     tools:context="com.mycroft.qrcodedemo.ZxingActivity">
 
+    <EditText
+        android:id="@+id/contents_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入进行编码的字符"
+        android:maxLength="160"
+        android:maxLines="1"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"/>
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,4 +32,10 @@
         android:onClick="decode"
         android:text="decode"/>
 
+    <ImageView
+        android:id="@+id/qrcode_image_view"
+        android:background="@android:color/black"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="8dp"/>
 </LinearLayout>
