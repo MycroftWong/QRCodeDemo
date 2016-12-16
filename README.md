@@ -15,6 +15,20 @@
 
 使用```QRCodeOverlayView```代替```ViewfinderView```, 不过还缺少在二维码扫描框下方添加文字。
 
+2. 2016年12月16日09:31:19
+
+使用了[NextQRCode](https://github.com/yoojia/NextQRCode), 相机出现变形，不好用，不过扫描感觉挺快，看源码，实际也只是直接使用了ZXing的解析功能。
+
+而且同样在Android 4.4模拟器上出现崩溃的问题
+
+3. 2016年12月16日09:39:21
+
+在这个Demo中，Android 4.4模拟器中，[QRCodeReaderView](https://github.com/dlazaro66/QRCodeReaderView)库很大几率会抛出```java.lang.RuntimeException: startPreview failed```异常，而下载该源码sample运行也会出现出现同样的问题。需要进行优化或者换一个扫描库。
+
+解决：2016年12月16日09:39:42
+
+没有使用Android SDK的模拟器，使用了“夜神安卓模拟器”(Android 4.4.2)不会出现崩溃情况，认为可能是模拟器的问题
+
 
 ## 绘制.9图片
 
@@ -34,5 +48,6 @@ mSquareNinePatch.draw(canvas, mSquareRect, mPaint);
 
 // 总结二维码扫描，同时将ViewFinderView再进一步修改。
 
-在这个Demo中，[QRCodeReaderView](https://github.com/dlazaro66/QRCodeReaderView)库很大几率会抛出```java.lang.RuntimeException: startPreview failed```异常，而下载该源码sample运行也会出现出现同样的问题。需要进行优化或者换一个扫描库。
+
+
 

@@ -23,6 +23,7 @@ public class IndexActivity extends AppCompatActivity {
 
     public void scan(View view) {
         startActivityForResult(new Intent(this, MainActivity.class), REQUEST_CODE);
+//        startActivityForResult(new Intent(this, NextQRCodeActivity.class), REQUEST_CODE);
     }
 
     public void test(View view) {

@@ -5,9 +5,11 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.NinePatch;
 import android.graphics.Paint;
 import android.graphics.Rect;
+import android.graphics.Typeface;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.view.View;
@@ -91,10 +93,26 @@ public class QRCodeOverlayView extends View {
             mLineDistance = 0;
         }
 
+        mPaint.setColor(Color.WHITE);
+        mPaint.setTextSize(TEXT_SIZE * getResources().getDisplayMetrics().density);
+        mPaint.setTypeface(Typeface.DEFAULT);
+
+        final Paint.FontMetricsInt fontMetrics = mPaint.getFontMetricsInt();
+        int baseline = (mSquareRect.bottom + mSquareRect.top - fontMetrics.bottom - fontMetrics.top) / 2 + slideWidth / 2 + 48;
+
+        mPaint.setTextAlign(Paint.Align.CENTER);
+
+        canvas.drawText("将对方推广码放入框中，自动扫描", measuredWidth >> 1, baseline, mPaint);
+
+        mPaint.reset();
+        mPaint.setFlags(Paint.ANTI_ALIAS_FLAG);
+        mPaint.setAntiAlias(true);
+
         postInvalidateDelayed(DRAW_DELAY);
     }
 
     private static final int DRAW_DELAY = 14;
+    private static final int TEXT_SIZE = 14;
 
 }
 

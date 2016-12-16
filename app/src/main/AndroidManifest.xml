@@ -38,6 +38,11 @@
         <activity
             android:name=".TestActivity"
             android:screenOrientation="portrait"/>
+        <activity
+            android:name=".NextQRCodeActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ZxingActivity">
+        </activity>
     </application>
 
 </manifest>
