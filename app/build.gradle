@@ -32,4 +32,5 @@ dependencies {
     }
     compile 'com.github.yoojia:next-qrcode:2.0-2'
     compile files('libs/android-core-3.3.0.jar')
+    compile files('libs/android-integration-3.3.0.jar')
 }
